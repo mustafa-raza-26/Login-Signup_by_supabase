@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/63fac70219.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+
+  <h1 class="heading">Login</h1>
+
+  <div class="container">
+    <div class="row justify-content-center text-center d-block">
+      <label for="email" class="col-12 col-md-4">
+        <span> <i class="fa-regular fa-envelope"></i> <input id="email" type="email" placeholder="Email" aria-required="true"></span>
+      </label>
+        <br><br>
+      <label for="pass" class="col-12 col-md-4">
+        <span> <i class="fa-solid fa-lock"></i> <input id="password" type="password" placeholder="Password" aria-required="true"></span>
+      </label>
+        <br><br>
+      <button id="logBtn " class="col-11 col-md-2">login</button>
+        <br><br>
+      <div class="acc">Not a member? <a href="signup.html">Sign up now</a></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+  <script src="sign.js"></script>
+</body>
+</html>
