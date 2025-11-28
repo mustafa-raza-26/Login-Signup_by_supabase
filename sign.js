@@ -1,76 +1,95 @@
-// let user_name = document.getElementById('name');
-// // let number = document.getElementById('num');
-// let email = document.getElementById('email');
-// let password = document.getElementById('password');
-// let signupBtn = document.getElementById('signBtn');
-
-// if (signupBtn) {
-// signupBtn.addEventListener('click', async ()=>{
-//   if (user_name.value == "" || email.value == "" || password.value == "") {
-//       alert('Fill all fields before login')
-//   }else{
-//     const { data, error } = await client.auth.signUp(
-//   {
-//     email: email.value,
-//     password: password.value,
-//     options: {
-//       emailRedirectTo: 'https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html',
-
-//       data:{
-//         displayName : user_name.value,
-//         // number : number.value
-//       } 
-//     }
-//   })
-
-// if (error) {
-//   alert('error' + error.message);
-//   console.error('error' + error.message);
-// }else{
-//   window.location.href = 'https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html'
-// }
-
-//   user_name.value = ""
-//   email.value == ""
-//   password.value == ""
-
-//   }
-// })
-// }
-
 let user_name = document.getElementById('name');
+// let number = document.getElementById('num');
 let email = document.getElementById('email');
 let password = document.getElementById('password');
 let signupBtn = document.getElementById('signBtn');
 
 if (signupBtn) {
-  signupBtn.addEventListener('click', async () => {
+signupBtn.addEventListener('click', async ()=>{
+  if (user_name.value == "" || email.value == "" || password.value == "") {
+      alert('Fill all fields before login')
+  }else{
+    const { data, error } = await client.auth.signUp(
+  {
+    email: email.value,
+    password: password.value,
+    options: {
+      emailRedirectTo: 'https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html',
 
-    if (user_name.value == "" || email.value == "" || password.value == "") {
-      alert('Fill all fields before login');
-      return;
+      data:{
+        displayName : user_name.value,
+        // number : number.value
+      } 
     }
+  })
 
-    const { data, error } = await client.auth.signUp({
-      email: email.value,
-      password: password.value,
-      options: {
-        emailRedirectTo: "https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html",
-        data: {
-          displayName: user_name.value
-        }
-      }
-    });
+if (error) {
+  alert('error' + error.message);
+  console.error('error' + error.message);
+}else{
+  window.location.href = 'https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html'
+}
 
-    if (error) {
-      alert('Error: ' + error.message);
-      console.error(error.message);
-    } else {
-      window.location.href = "https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html";
-    }
+  user_name.value = ""
+  email.value == ""
+  password.value == ""
 
-    user_name.value = "";
-    email.value = "";
-    password.value = "";
-  });
+  }
+})
+}
+
+// let user_name = document.getElementById('name');
+// let email = document.getElementById('email');
+// let password = document.getElementById('password');
+// let signupBtn = document.getElementById('signBtn');
+// let googleBtn = document.getElementById('googleBtn')
+
+// if (signupBtn) {
+//   signupBtn.addEventListener('click', async () => {
+
+//     if (user_name.value == "" || email.value == "" || password.value == "") {
+//       alert('Fill all fields before login');
+//       return;
+//     }
+
+//     const { data, error } = await client.auth.signUp({
+//       email: email.value,
+//       password: password.value,
+//       options: {
+//         emailRedirectTo: "https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html",
+//         data: {
+//           displayName: user_name.value
+//         }
+//       }
+//     });
+
+//     if (error) {
+//       alert('Error: ' + error.message);
+//       console.error(error.message);
+//     } else {
+//       window.location.href = "https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html";
+//     }
+
+//     user_name.value = "";
+//     email.value = "";
+//     password.value = "";
+//   });
+// }
+
+if (googleBtn) {
+  googleBtn.addEventListener('click', async()=>{
+
+    const { data, error } = await client.auth.signInWithOAuth({
+    provider: 'google' ,
+    options: {
+    redirectTo: "https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html"
+  }
+})
+if (error) {
+    console.log('error');
+}
+else{
+    console.log('data');
+}
+  })
 }
