@@ -14,7 +14,7 @@ signupBtn.addEventListener('click', async ()=>{
     email: email.value,
     password: password.value,
     options: {
-      emailRedirectTo: 'http://127.0.0.1:5500/index.html',
+      emailRedirectTo: '../index.html',
 
       data:{
         displayName : user_name.value,
@@ -27,7 +27,7 @@ if (error) {
   alert('error' + error.message);
   console.error('error' + error.message);
 }else{
-  window.location.href = 'https://mustafa-raza-26.github.io/Login-Signup_by_supabase/index.html'
+  window.location.href = 'https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html'
 }
 
   user_name.value = ""
