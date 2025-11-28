@@ -18,8 +18,9 @@ loginBtn.addEventListener('click', async ()=>{
 
     if (error) {
         console.error('error'+ error.message);
+
     }else{
-        window.location.href = `https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html`
+        window.location.href = "https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html";
     }
     }
 })
