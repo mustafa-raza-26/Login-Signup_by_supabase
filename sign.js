@@ -82,7 +82,7 @@ if (googleBtn) {
     const { data, error } = await client.auth.signInWithOAuth({
     provider: 'google' ,
     options: {
-    redirectTo: "http://127.0.0.1:5500/"
+    redirectTo: "https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html"
   }
 })
 if (error) {
