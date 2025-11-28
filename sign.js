@@ -14,7 +14,7 @@ signupBtn.addEventListener('click', async ()=>{
     email: email.value,
     password: password.value,
     options: {
-      emailRedirectTo: '../index.html',
+      emailRedirectTo: 'https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html',
 
       data:{
         displayName : user_name.value,
