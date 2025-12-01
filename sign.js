@@ -3,6 +3,7 @@ let number = document.getElementById('num');
 let email = document.getElementById('email');
 let password = document.getElementById('password');
 let signupBtn = document.getElementById('signBtn');
+let fbBtn = document.getElementById('fbBtn')
 
 if (signupBtn) {
 signupBtn.addEventListener('click', async ()=>{
@@ -40,7 +41,6 @@ if (error) {
 
 if (googleBtn) {
   googleBtn.addEventListener('click', async()=>{
-
     const { data, error } = await client.auth.signInWithOAuth({
     provider: 'google' ,
     options: {
@@ -48,7 +48,22 @@ if (googleBtn) {
   }
 })
 if (error) {
-    console.log(error);
+    console.error(error);
+}
+  })
+}
+
+if (fbBtn) {
+  fbBtn.addEventListener('click', async()=>{
+    const { data, error } = await client.auth.signInWithOAuth({
+    provider: 'facebook' ,
+    options: {
+      redirectTo: 'dashboard.html'
+    // redirectTo: "https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html"
+  }
+})
+if (error) {
+    console.error(error);
 }
   })
 }

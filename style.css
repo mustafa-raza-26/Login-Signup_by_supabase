@@ -48,7 +48,7 @@ label>input{
     color: #ffffff;
     background-color: rgb(220, 220, 220);
 }
-.row>button{
+.row>.but{
     padding: 15px;
     border: 1px solid #2f2e4a;
     color: #ffffff;
@@ -59,4 +59,14 @@ label>input{
 }
 .row>.acc>a{
     color: rgb(160, 160, 160);
+}
+.row>.linkBtn{
+    padding-left: 30px;
+}
+.linkBtn>#googleBtn,#fbBtn{
+    padding: 0;
+    margin-right: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: white;
 }
