@@ -146,7 +146,7 @@ if (fbBtn) {
 
     if (error) {
       console.error("Facebook Error:", error.message);
-      alert("Facebook Login Error: " + error.message);
+      window.location.href = 'https://mustafa-raza-26.github.io/Login-Signup_by_supabase/signup.html'
       return;
     }
   });
