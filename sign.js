@@ -59,8 +59,8 @@ if (fbBtn) {
     const { data, error } = await client.auth.signInWithOAuth({
     provider: 'facebook' ,
     options: {
-    // redirectTo: "https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html" 
-    redirectTo: window.location.origin + 'https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html'
+    redirectTo: "https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html" 
+    // redirectTo: window.location.origin + 'https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html'
   }
 })
 if (error) {
