@@ -3,6 +3,7 @@ let number = document.getElementById('num');
 let email = document.getElementById('email');
 let password = document.getElementById('password');
 let signupBtn = document.getElementById('signBtn');
+let googleBtn = document.getElementById('googleBtn')
 let fbBtn = document.getElementById('fbBtn')
 
 if (signupBtn) {
@@ -58,12 +59,13 @@ if (fbBtn) {
     const { data, error } = await client.auth.signInWithOAuth({
     provider: 'facebook' ,
     options: {
-      redirectTo: 'dashboard.html'
-    // redirectTo: "https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html"
+    // redirectTo: "https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html" 
+    redirectTo: window.location.origin + 'https://mustafa-raza-26.github.io/Login-Signup_by_supabase/dashboard.html'
   }
 })
 if (error) {
     console.error(error);
+    window.location.href = 'https://mustafa-raza-26.github.io/Login-Signup_by_supabase/signup.html'
 }
   })
 }
